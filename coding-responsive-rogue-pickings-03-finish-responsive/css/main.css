@@ -16,8 +16,7 @@ body {
 	display: flex;
 	justify-content: center;
 	flex-flow: row wrap;
-	/* margin: 0 auto; */
-	/* overflow: auto; */
+
 }
 
 h1,
@@ -29,45 +28,39 @@ h4 {
 }
 
 h1 {
-	font-size: 1.875em /*30px*/;
+	font-size: 1.875em;
 }
 
 h2 {
-	font-size: 1.5em /*24px*/;
+	font-size: 1.5em;
 }
 
 h3 {
-	font-size: 1.25em /*20px*/;
+	font-size: 1.25em;
 }
 
 h4 {
-	font-size: 0.75em /*12px*/;
+	font-size: .75em;
 }
 
 p {
-	font-size: 1em;
+	font-size: 1rem;
 	line-height: 36px;
 }
 
 /******** HEADER STYLES ********/
 /* The widths are in a percentage! */
 header {
-	/* height: 110px; */
 	display: flex;
 	justify-content: center;
 	text-align: center;
-	
-	/* margin: 0 auto; */
 }
 
 header h1 {
-	/* float: left; */
 	margin: 0;
-	padding-top: 38px;
-	padding-bottom: 20px;
-	width: 100%;
+	padding: 38px 0 20px 0;
 	border-bottom: 3px solid #77a466;
-
+	width: 100%;
 }
 
 header h1 span {
@@ -75,7 +68,6 @@ header h1 span {
 }
 
 header nav {
-	/* float: right; */
 	padding: 20px 0;
 }
 
@@ -83,18 +75,14 @@ header nav ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
-
 }
 
 header nav ul li {
-	/* display: inline-block; */
-	font-size: 0.875rem /*14px*/;
+	font-size: .875rem;
 	font-weight: 700;
 	text-transform: uppercase;
-	width: 100%;
 	padding: 10px 0;
-	/*margin-bottom: 20;
-	padding-top: 30; */
+	width: 100%;
 }
 
 header nav ul li a {
@@ -111,16 +99,11 @@ header nav ul li a {
 	border-bottom: 3px solid #77a466;
 }
 
-
 .main-title h2 {
 	color: #45610E;
 	padding: 5px 0;
 }
 
-.main-title p {
-	display: flex;
-	align-items: center;
-}
 /******** BOTTOM SECTION ********/
 .top-section,
 .bottom-section {
@@ -136,26 +119,20 @@ header nav ul li a {
 .section-one,
 .section-two,
 .section-three {
-	/* box-sizing: border-box; */
-	/* float: left; */
-	/* padding: 0 40px;*/
-	box-sizing: border-box;	
+	box-sizing: border-box;
 }
 
 .section-one {
-	/* width: 29%; */
 	width: 100%;
 }
 
 .section-two {
-	/* width: 42%; */
 	width: 100%;
 	border-top: 5px solid #EEE;
 	border-bottom: 5px solid #EEE;
 }
 
 .section-three {
-	/* width: 29%; */
 	width: 100%;
 }
 
@@ -170,8 +147,8 @@ header nav ul li a {
 
 .menu-list li {
 	color: #45610E;
-	font-size: 1rem /*16px*/;
 	line-height: 36px;
+	font-size: 1rem;
 }
 
 /******** FOOTER STYLES ********/
@@ -186,74 +163,63 @@ footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
 	color: #45610E;
-	font-size: 0.875rem /*14px*/;
+	font-size: .875rem;
 }
 
+/******** TABLET MEDIA QUERY ********/
 @media all and (min-width: 768px) {
-	/* Tablet styles here */
 
-.bottom-section .content-wrapper {
-	justify-content: space-evenly;
+	/******** BOTTOM SECTION ********/
+	.bottom-section .content-wrapper {
+		justify-content: space-evenly;
+	}
+
+	.section-one {
+		width: 26%;
+	}
+
+	.section-two {
+		width: 40%;
+		border-left: 5px solid #EEE;
+		border-right: 5px solid #EEE;
+		border-top: none;
+		border-bottom: none;
+		padding: 0 30px;
+	}
+
+	.section-three {
+		width: 26%;
+	}
 }
 
-.section-one {
-	width: 26%;
-}
-
-.section-two {
-	width: 40%;
-	padding-left: 30px;
-	padding-right: 30px;
-	border-left: solid 5px #EEE;
-	border-right: solid 5px #EEE;
-	border-top: none;
-	border-bottom: none;
-}
-
-.section-three {
-	width: 26%;
-}
-
+/******** DESKTOP MEDIA QUERY ********/
 @media all and (min-width: 1200px) {
-	 /* Desktop styles here */
 
-body {
-	font-size: 1em;
-}
+	/******** GLOBAL STYLES ********/
+	body {
+		font-size: 1em;
+	}
 
-header .content-wrapper {
-	justify-content: space-between;
-	align-items: center;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
+	header .content-wrapper {
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px 0;
+	}
 
-header h1 {
-	width: 30%;
-	padding: 0;
-	border-bottom: none;
-	text-align: left;
-}
+	header h1 {
+		width: 30%;
+		padding: 0;
+		border-bottom: none;
+		text-align: left;
+	}
 
-header nav {
-	width: 21%;
-}
+	header nav {
+		width: 21%;
+	}
 
-header nav ul {
-	display: flex;
-	justify-content: space-between;
-} 
-
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
